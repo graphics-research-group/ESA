@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Enhancing Sketch Animation">
+  <meta name="google-site-verification" content="D0ys6wLg07UNB0wxvc8V9r64Pwg4VU6mB_2gZNkVLhc" />
+  <meta name="keywords" content=" Sketch Animation, Text-to-video prior, Regularization">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhancing Sketch Animation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFL093Z84S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-BFL093Z84S');
+  </script>	
+	
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="static/assets/GRG_medium.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Enhancing Sketch Animation: Text-to-Video Diffusion Models with Temporal Consistency and Rigidity Constraints</h1>
+			<div class="is-size-5 publication-authors">
+			    <span class="author-block">
+			        <a href="https://gauravraiiiitd.github.io/" target="_blank">Gaurav Rai, </a>
+			    </span>
+			    <span class="author-block">
+			        <a href="https://www.iiitd.ac.in/ojaswa" target="_blank">Ojaswa Sharma</a>
+			    </span>
+			    <br>
+			    <span class="author-block">
+			        <a href="https://graphics.iiitd.edu.in/" target="_blank">Graphics Research Group, </a>
+			    </span>
+			    <span class="author-block">
+			        <a href="https://iiitd.ac.in/" target="_blank">IIIT Delhi</a>
+			    </span>
+			</div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2411.19381" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+			  		
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+			  
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted loop height="100% "> -->
+        <!-- <source src="static/assets/GRAPP-2025.mp4" -->
+                <!-- type="video/mp4"> -->
+      <!-- </video> -->
+     <img id="teaser" src="static/assets/GRAPP-2025.png" alt="workflow" style="height: 100%;">
+	  <h2 class="subtitle ">
+		<b>Abstract.</b> Animating hand-drawn sketches using traditional tools is challenging and complex. Sketches provide a visual basis for explanations, and animating these sketches offers an experience of real-time scenarios. We propose an approach for animating a given input sketch based on a descriptive text prompt. Our method utilizes a parametric representation of the sketch’s strokes. Unlike previous methods, which struggle to estimate smooth and accurate motion and often fail to preserve the sketch’s topology, we leverage a pre-trained text-to-video diffusion model with SDS loss to guide the motion of the sketch’s strokes. We introduce length-area (LA) regularization to ensure temporal consistency by accurately estimating the smooth displacement of control points across the frame sequence. Additionally, to preserve shape and avoid topology changes, we apply a shape-preserving As-Rigid-As-Possible (ARAP) loss to maintain sketch rigidity. Our method surpasses state-of-the-art performance in both quantitative and qualitative evaluations.
+		
+		</h2>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-widescreen" id="gallery">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <!-- <div class="columns is-centered"> -->
+      <div class="column is-full-width">
+            <h2 class="title is-3">Results</h2><br>
+    </div>
+    <div class="container is-max-desktop is-centered has-text-centered">
+      <div class="gallery">
+        
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/assets/results/horse_svg.png" alt="dolphin_2"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/assets/results/horse.gif" alt="dolphin_2"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A galloping horse." title="">A galloping horse.</h6>
+        </div>
+        
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/assets/results/surfer0_scaled1.png" alt="flower_a1"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/assets/results/surfer.gif" alt="flower_a1"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A surfer riding and maneuvering on waves on a surfboard." title="">A surfer riding and maneuvering on waves on a surfboard.</h6>
+        </div>
+        
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/assets/results/lizard1_16_scaled1.png" alt="lizard_1"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/assets/results/lizard.gif" alt="lizard_1"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="The lizard moves with a sinuous, undulating motion, gliding smoothly over surfaces using its agile limbs and tail for balance and propulsion." title="">The lizard moves with a sinuous, undulating motion, gliding smoothly over surfaces using its agile limbs and tail for balance and propulsion.</h6>
+        </div>
+
+        <div class="captioned_video">
+          <div class="inner_gallery">
+            <img class="gallery_img over grid_r_1 grid_c_1" src="static/assets/results/butterfly_3_scaled1.png" alt="butterfly_1"/>
+            <img class="gallery_img under grid_r_1 grid_c_1" src="static/assets/results/butterfly.gif" alt="butterfly_1"/>
+          </div>
+          <h6 class="caption has-tooltip-multiline has-tooltip-bottom" data-tooltip="A butterfly fluttering its wings and flying gracefully." title="">A butterfly fluttering its wings and flying gracefully.</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Comparison</h2>
+
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 autoplay controls muted loop
+                 width="90%">
+            <source src="static/assets/comparison/comparison.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{rai2024enhancing,
+  title={Enhancing Sketch Animation: Text-to-Video Diffusion Models with Temporal Consistency and Rigidity Constraints},
+  author={Rai, Gaurav and Sharma, Ojaswa},
+  journal={arXiv preprint arXiv:2411.19381},
+  year={2024}
+}
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+		
+          <p>
+            This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
